@@ -1,3 +1,4 @@
+![FlexiNet CI Status](https://github.com/nahorfelix/flexinet-isp-core/actions/workflows/main.yml/badge.svg)
 # FlexiNet ISP Core 🚀
 
 **FlexiNet** is a high-scale ISP Management & Provisioning Platform. It mimics enterprise-grade infrastructure by managing real-time data subscriptions, regional network health, and automated billing analytics for a simulated database of millions (mocked at 300+) of clients.
