@@ -7,38 +7,31 @@ on:
     branches: [ main ]
 
 jobs:
-  # Job 1: Build and Test the Backend
   backend-test:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '18'
-          
+          node-version: '20'
       - name: Install Backend Dependencies
         run: |
           cd server
           npm install
 
-  # Job 2: Build and Test the Frontend
   frontend-test:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      
       - name: Setup Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: '18'
-          
+        uses: actions/setup-node@v3  # Aligned with 'name'
+        with:                        # Aligned with 'name'
+          node-version: '20'
       - name: Install Frontend Dependencies
         run: |
           cd client
           npm install
-
       - name: Build Frontend
         run: |
           cd client
