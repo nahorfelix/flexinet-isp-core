@@ -1,0 +1,24 @@
+// This defines how a user and their internet plan interact
+model User {
+  id            String         @id @default(uuid())
+  email         String         @unique
+  name          String
+  subscriptions Subscription[]
+}
+
+model Plan {
+  id          String   @id @default(uuid())
+  name        String   // e.g., "Daily Lite", "Weekly Pro"
+  duration    Int      // Duration in hours (24, 168, 720)
+  price       Float
+  speedLimit  String   // e.g., "5Mbps"
+}
+
+model Subscription {
+  id        String   @id @default(uuid())
+  userId    String
+  user      User     @relation(fields: [userId], references: [id])
+  planName  String
+  expiresAt DateTime
+  isActive  Boolean  @default(true)
+}
