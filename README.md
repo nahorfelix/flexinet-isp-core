@@ -8,7 +8,7 @@
 
 ### Customer Portal
 The user-facing dashboard where clients manage subscriptions, track data usage, and monitor connection status in real-time.
-![Customer Dashboard](./assets/customer.png)
+![Customer Dashboard](./assets/Customer.png)
 
 ### Administrative Operations Center
 A powerful command center for network engineers to track revenue, monitor system health, and manage regional outages.
